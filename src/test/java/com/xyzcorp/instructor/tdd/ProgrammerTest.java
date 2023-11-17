@@ -1,10 +1,8 @@
-package com.xyzcorp.tdd;
+package com.xyzcorp.instructor.tdd;
 
-import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
-import java.util.function.Supplier;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

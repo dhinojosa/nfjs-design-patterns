@@ -1,4 +1,4 @@
-package com.xyzcorp.tdd;
+package com.xyzcorp.instructor.tdd;
 
 import java.time.LocalDate;
 import java.util.function.Supplier;
