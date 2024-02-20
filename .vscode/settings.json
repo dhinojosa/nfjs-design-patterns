@@ -1,7 +1,5 @@
 {
-    "java.configuration.updateBuildConfiguration": "interactive",
     "java.compile.nullAnalysis.nullable": [
-
         "javax.annotation.Nullable",
         "org.eclipse.jdt.annotation.Nullable",
         "org.springframework.lang.Nullable"
@@ -10,8 +8,13 @@
         {
           "name": "JavaSE-20",
           "path": "/home/gitpod/.sdkman/candidates/java/20-tem",
-          "default": true
+        },
+        {
+            "name": "JavaSE-21",
+            "path": "/home/gitpod/.sdkman/candidates/java/21-tem",
+            "default": true
         }
     ],
-    "java.compile.nullAnalysis.mode": "automatic"
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.updateBuildConfiguration": "interactive",
 }
