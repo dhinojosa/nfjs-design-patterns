@@ -5,6 +5,7 @@ package com.xyzcorp.javapatterns.proxy.virtual;
  */
 public class PuzzlePiece1 {
 
+    @SuppressWarnings("unused")
     private PuzzlePiece2 piece2;
 
     public PuzzlePiece1(PuzzlePiece2 piece2) {

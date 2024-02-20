@@ -1,9 +1,6 @@
 package com.xyzcorp.javapatterns.builder.inguava;
 
 import com.google.common.collect.ImmutableList;
-import com.google.common.collect.Lists;
-
-import javax.swing.*;
 
 /**
  * Created by Daniel Hinojosa

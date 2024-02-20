@@ -1,7 +1,5 @@
 package com.xyzcorp.javapatterns.abstractfactory.classic;
 
-import javax.sql.DataSource;
-
 /**
  * User: Daniel Hinojosa (dhinojosa@evolutionnext.com)
  * Date: 5/29/12

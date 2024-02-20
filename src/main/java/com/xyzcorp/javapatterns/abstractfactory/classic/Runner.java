@@ -7,6 +7,7 @@ package com.xyzcorp.javapatterns.abstractfactory.classic;
  */
 public class Runner {
 
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
         String type = System.getProperty("daoType");
         DAOType daoType = null;

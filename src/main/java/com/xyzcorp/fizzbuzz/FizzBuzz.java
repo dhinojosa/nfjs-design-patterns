@@ -11,6 +11,7 @@ public class FizzBuzz {
         else return String.valueOf(i);
     }
 
+    @SuppressWarnings("null")
     public static void main(String[] args) {
         IntStream.rangeClosed(1, 100).boxed()
             .map(FizzBuzz::convert).forEach(System.out::println);

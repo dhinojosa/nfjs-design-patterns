@@ -1,6 +1,7 @@
 package com.xyzcorp.javapatterns.mediator;
 
 public class SpouseInfoWidget implements Component {
+    @SuppressWarnings("unused")
     private boolean enabled;
 
     @Override

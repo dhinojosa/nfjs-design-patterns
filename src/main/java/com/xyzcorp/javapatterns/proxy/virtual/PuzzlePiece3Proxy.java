@@ -5,9 +5,10 @@ package com.xyzcorp.javapatterns.proxy.virtual;
  */
 public class PuzzlePiece3Proxy implements PuzzlePiece3 {
 
-    private PuzzlePiece3 poxied;
+    @SuppressWarnings("unused")
+    private PuzzlePiece3 proxied;
 
     public void setProxied(PuzzlePiece3 proxied) {
-        this.poxied = proxied;
+        this.proxied = proxied;
     }
 }
