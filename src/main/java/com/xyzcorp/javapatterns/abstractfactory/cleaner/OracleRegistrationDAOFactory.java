@@ -1,8 +1,5 @@
 package com.xyzcorp.javapatterns.abstractfactory.cleaner;
 
-
-import javax.sql.DataSource;
-
 /**
  * User: Daniel Hinojosa (dhinojosa@evolutionnext.com)
  * Date: 5/29/12

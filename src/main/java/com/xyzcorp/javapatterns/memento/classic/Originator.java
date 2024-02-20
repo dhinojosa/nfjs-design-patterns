@@ -10,7 +10,7 @@ public class Originator<E> {
         System.out.println("Originator: Setting state to " + state);
     }
 
-    public Memento saveToMemento() {
+    public Memento<E> saveToMemento() {
         System.out.println("Originator: Saving to Memento.");
         return new Memento<>(this.state);
     }

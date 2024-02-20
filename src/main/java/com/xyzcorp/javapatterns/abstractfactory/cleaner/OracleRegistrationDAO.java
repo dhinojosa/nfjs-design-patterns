@@ -9,6 +9,7 @@ import javax.sql.DataSource;
  * Time: 5:55 PM
  */
 public class OracleRegistrationDAO extends RegistrationDAO {
+   @SuppressWarnings("unused")
    private DataSource dataSource;
 
    public OracleRegistrationDAO() {

@@ -68,7 +68,7 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>30.1.1-jre</version>
+            <version>33.0.0-jre</version>
         </dependency>
         <dependency>
             <groupId>io.reactivex.rxjava2</groupId>
@@ -88,7 +88,7 @@
                         <include>**/*Property.java</include>
                         <include>**/*Test.java</include>
                     </includes>
-                    <argLine>--enable-preview</argLine>
+                    <!-- <argLine>enable-preview</argLine> -->
                 </configuration>
             </plugin>
             <plugin>
@@ -121,9 +121,9 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven-compiler-plugin.version}</version>
                 <configuration>
-                    <source>20</source>
-                    <target>20</target>
-                    <compilerArgs>--enable-preview</compilerArgs>
+                    <source>21</source>
+                    <target>21</target>
+                    <!-- <compilerArgs>enable-preview</compilerArgs> -->
                 </configuration>
             </plugin>
         </plugins>

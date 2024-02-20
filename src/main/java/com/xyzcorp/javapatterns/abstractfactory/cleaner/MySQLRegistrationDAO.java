@@ -9,6 +9,8 @@ import javax.sql.DataSource;
  * Time: 5:55 PM
  */
 public class MySQLRegistrationDAO extends RegistrationDAO {
+   
+   @SuppressWarnings("unused")
    private DataSource dataSource;
 
    public MySQLRegistrationDAO() {
@@ -22,6 +24,7 @@ public class MySQLRegistrationDAO extends RegistrationDAO {
 
    @Override
    public void persist(Registration registration) {
+      
    }
 
    @Override
