@@ -6,7 +6,7 @@ NFJS Design Patterns Training
 
 ## Requirements
 
-* JDK 21
+* JDK 22
 * Maven
 * Your favorite IDE
 
