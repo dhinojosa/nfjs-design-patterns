@@ -6,6 +6,7 @@ import java.time.LocalDate;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@SuppressWarnings("unused")
 public class ProgrammerTest {
 
 }
