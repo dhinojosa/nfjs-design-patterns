@@ -8,12 +8,11 @@ package com.xyzcorp.javapatterns.builder.custom;
 public class Barista {
     public static void main(String[] args) {
         EspressoDrink drink =
-                EspressoDrinkMaker
-                        .addShots(2)
-                        .addWhip()
-                        .addSprinkles()
-                        .addSkimMilk()
-                        .build();
+            EspressoDrink
+                .addShots(2)
+                .setDecaf()
+                .addSkimMilk()
+                .build();
 
         System.out.println(drink);
     }

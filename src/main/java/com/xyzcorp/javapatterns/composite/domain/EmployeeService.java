@@ -1,13 +1,13 @@
 package com.xyzcorp.javapatterns.composite.domain;
 
 public class EmployeeService {
-    private EmployeeDAO employeeDAO;
+    private EmployeeRepository employeeRepository;
 
-    public EmployeeService(EmployeeDAO employeeDAO) {
-        this.employeeDAO = employeeDAO;
+    public EmployeeService(EmployeeRepository employeeRepository) {
+        this.employeeRepository = employeeRepository;
     }
 
     public void hireNewEmployee(Employee employee) {
-        this.employeeDAO.addEmployee(employee);
+        this.employeeRepository.addEmployee(employee);
     }
 }

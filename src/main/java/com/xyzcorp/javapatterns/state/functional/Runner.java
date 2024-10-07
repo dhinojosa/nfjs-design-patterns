@@ -7,11 +7,17 @@ public class Runner {
         TennisGame tennisGame = TennisGame.start(new Player("Salvador"),
             new Player("Rafael"));
 
+        System.out.println(tennisGame.score());
 
         TennisGame state1 = tennisGame
-            .nextTurn((sal1, rafael1) -> rafael1)
-            .nextTurn((sal1, rafael1) -> sal1)
+            .nextTurn((sal, rafael) -> rafael)
+            .nextTurn((sal, rafael) -> sal)
             .nextTurn((sal, rafael) -> rafael);
+
+        //Create a different scenario
+        TennisGame alternativeUniverse = state1.nextTurn((sal, rafael) -> sal)
+            .nextTurn((sal, rafael) -> sal)
+            .nextTurn((sal, rafael) -> sal);
 
 
         TennisGame state2 = state1
@@ -27,6 +33,7 @@ public class Runner {
 
         System.out.println(state1.score());
         System.out.println(state2.score());
+        System.out.println(alternativeUniverse.score());
         System.out.println(resultGame.score());
     }
 }

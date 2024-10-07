@@ -12,7 +12,7 @@ public class Client {
 
     public static void main(String[] args) {
         NumberAccumulator numberAccumulator = new NumberAccumulator();
-        numberAccumulator.setAccumulatorStrategy(new ProductAccumulator());
+        numberAccumulator.setAccumulatorStrategy((a, b) -> a + b);
 
         List<Integer> integers = new ArrayList<>();
         integers.add(1);
@@ -20,6 +20,6 @@ public class Client {
         integers.add(3);
         integers.add(4);
 
-        assert numberAccumulator.accumulate(integers) == 24;
+        assert numberAccumulator.accumulate(integers) == 10;
     }
 }

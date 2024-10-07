@@ -19,11 +19,9 @@ public class Runner {
             else return Optional.empty();
         };
 
-        Reviewer jdPower = car -> {
-            if (car.rearCamera() && car.driveLaneAssist() && car.powerSteering())
-                return Optional.of("JDPower");
-            else return Optional.empty();
-        };
+        Reviewer jdPower = car ->
+            car.rearCamera() && car.driveLaneAssist() && car.powerSteering() ?
+            Optional.of("JDPower") : Optional.empty();
 
         Stream<Reviewer> reviewerStream = Stream.of(carAndBuyer, carFax, jdPower);
         Car car = new Car("Honda", "Accord", 2011, true, true, false, true, true);

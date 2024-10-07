@@ -10,10 +10,14 @@ public class FunctionalBuilder {
             (String firstName) -> (String middleName) ->
                 (String lastName) -> new Person(firstName, middleName, lastName);
 
-        Function<String, Function<String, Person>> afterApplyingFirstName = f.apply("Thomas");
-        Function<String, Person> afterApplyingMiddleName = afterApplyingFirstName.apply("Falco");
+        Function<String, Function<String, Person>> afterApplyingFirstName =
+            f.apply("Thomas");
+        Function<String, Person> afterApplyingMiddleName =
+            afterApplyingFirstName.apply("Falco");
         Person person = afterApplyingMiddleName.apply("Dolby");
 
+        Person newPerson = afterApplyingFirstName.apply("Rogers").apply("Stevie");
         System.out.println(person);
+        System.out.println(newPerson);
     }
 }

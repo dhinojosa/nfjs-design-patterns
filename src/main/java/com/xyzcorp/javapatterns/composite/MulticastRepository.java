@@ -1,22 +1,22 @@
 package com.xyzcorp.javapatterns.composite;
 
 import com.xyzcorp.javapatterns.composite.domain.Employee;
-import com.xyzcorp.javapatterns.composite.domain.EmployeeDAO;
+import com.xyzcorp.javapatterns.composite.domain.EmployeeRepository;
 
 import java.util.List;
 
-public class MulticastDAO implements EmployeeDAO {
+public class MulticastRepository implements EmployeeRepository {
 
-    private final List<EmployeeDAO> list;
+    private final List<EmployeeRepository> list;
 
-    public MulticastDAO(List<EmployeeDAO> list) {
+    public MulticastRepository(List<EmployeeRepository> list) {
         this.list = list;
     }
 
     @Override
     public void addEmployee(Employee employee) {
-        for (EmployeeDAO dao: list) {
-            dao.addEmployee(employee);
+        for (EmployeeRepository repository: list) {
+            repository.addEmployee(employee);
         }
     }
 }

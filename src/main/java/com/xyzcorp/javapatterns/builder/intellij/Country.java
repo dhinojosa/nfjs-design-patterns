@@ -12,7 +12,7 @@ public class Country {
     @SuppressWarnings("unused")
     private final String currency;
 
-    protected Country(String name, String capital, String demonym,
+    public Country(String name, String capital, String demonym,
                    int population, String currency) {
         this.name = name;
         this.capital = capital;

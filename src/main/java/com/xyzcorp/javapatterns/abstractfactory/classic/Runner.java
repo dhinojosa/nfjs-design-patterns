@@ -17,7 +17,8 @@ public class Runner {
             daoType = DAOType.ORACLE;
         }
 
-        Client client = new Client(RegistrationDAOAbstractFactory.createRegistrationDAO(daoType));
+        Client client = new Client(RegistrationDAOAbstractFactory
+            .createRegistrationDAO(daoType));
 
     }
 }

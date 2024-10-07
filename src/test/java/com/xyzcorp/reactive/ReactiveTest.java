@@ -31,12 +31,12 @@ public class ReactiveTest {
 
     @Test
     void testReactiveWithThreadBoundariesOrBulkheads() {
-        Observable.just(1,2,3,4,5)
-            .observeOn(Schedulers.computation())
-            .subscribeOn(Schedulers.io())
-            .map(i -> i * 10)
-            .observeOn(Schedulers.io())
-            .subscribe(this::updateTheDatabase);
+        Observable.just(1,2,3,4,5)               //io(1)
+            .observeOn(Schedulers.computation()) //computation
+            .subscribeOn(Schedulers.io())        //computation
+            .map(i -> i * 10)                    //computation
+            .observeOn(Schedulers.io())          //io(2)
+            .subscribe(this::updateTheDatabase); //io(2)
     }
 
     private void updateTheDatabase(Integer i) {

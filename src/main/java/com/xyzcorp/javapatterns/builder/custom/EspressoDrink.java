@@ -31,4 +31,8 @@ public class EspressoDrink {
         sb.append('}');
         return sb.toString();
     }
+
+    public static EspressoDrinkBuilder addShots(int i) {
+        return new EspressoDrinkBuilder(i);
+    }
 }

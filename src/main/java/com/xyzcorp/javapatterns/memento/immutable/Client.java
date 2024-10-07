@@ -14,11 +14,15 @@ public class Client {
         List<Messenger> caretaker = new ArrayList<Messenger>();
 
         Messenger messenger = new Messenger();
-        caretaker.add(messenger.postNextMessage(new Message(new Date(), "Hello", "Dan")));
-        caretaker.add(messenger.postNextMessage(new Message(new Date(), "Hello", "John")));
-        caretaker.add(messenger.postNextMessage(new Message(new Date(), "Hello", "Dwight")));
+        caretaker.add(messenger.postNextMessage(createMessageWithTheName("Dan")));
+        caretaker.add(messenger.postNextMessage(createMessageWithTheName("John")));
+        caretaker.add(messenger.postNextMessage(createMessageWithTheName("Dwight")));
 
         //rollback?
         assert caretaker.get(0).getCurrentMessage().getReceiver().equals("Dan");
+    }
+
+    private static Message createMessageWithTheName(String name) {
+        return new Message(new Date(), "Hello", name);
     }
 }

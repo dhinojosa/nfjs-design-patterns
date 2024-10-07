@@ -4,15 +4,24 @@ public class Runner {
     public static void main(String[] args) {
         Expression expression = new Multiply(new Constant(40),
             new Sum(new Constant(40), new Constant(60)));
-        System.out.println(evaluate(expression));
+        System.out.println(evaluateString(expression));
     }
 
     private static int evaluate(Expression expression) {
         return switch(expression) {
             case Constant c -> c.number();
-            case Sum    s -> evaluate(s.left()) + evaluate(s.right());
+            case Sum(var left, var right)  -> evaluate(left) + evaluate(right);
             case Subtract s -> evaluate(s.left()) - evaluate(s.right());
             case Multiply s -> evaluate(s.left()) * evaluate(s.right());
+        };
+    }
+
+    private static String evaluateString(Expression expression) {
+        return switch(expression) {
+            case Constant c -> String.valueOf(c.number());
+            case Sum(var left, var right)  -> evaluateString(left) + " + " + evaluate(right);
+            case Subtract(var left, var right) -> evaluateString(left) + " - " + evaluate(right);
+            case Multiply(var left, var right) -> evaluateString(left) + " * " + evaluate(right);
         };
     }
 }
