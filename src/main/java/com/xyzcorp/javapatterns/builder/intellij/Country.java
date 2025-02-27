@@ -12,12 +12,24 @@ public class Country {
     @SuppressWarnings("unused")
     private final String currency;
 
-    public Country(String name, String capital, String demonym,
+    private Country(String name, String capital, String demonym,
                    int population, String currency) {
         this.name = name;
         this.capital = capital;
         this.demonym = demonym;
         this.population = population;
         this.currency = currency;
+    }
+
+    protected Country(CountryBuilder countryBuilder) {
+        this.name = countryBuilder.getName();
+        this.capital = countryBuilder.getCapital();
+        this.demonym = countryBuilder.getDemonym();
+        this.population = countryBuilder.getPopulation();
+        this.currency = countryBuilder.getCurrency();
+    }
+
+    public CountryBuilder builder() {
+        return new CountryBuilder();
     }
 }

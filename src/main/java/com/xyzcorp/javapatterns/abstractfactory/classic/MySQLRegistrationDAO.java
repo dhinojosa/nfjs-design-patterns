@@ -8,9 +8,11 @@ package com.xyzcorp.javapatterns.abstractfactory.classic;
 public class MySQLRegistrationDAO extends RegistrationDAO {
     @Override
     public void persist(Registration registration) {
+        System.out.println( "MySQLRegistrationDAO.persist()");
     }
 
     @Override
     public void update(Registration registration) {
+        System.out.println( "MySQLRegistrationDAO.update()");
     }
 }

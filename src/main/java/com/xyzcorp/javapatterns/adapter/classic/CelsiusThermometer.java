@@ -1,4 +1,4 @@
-package com.xyzcorp.javapatterns.adapter;
+package com.xyzcorp.javapatterns.adapter.classic;
 
 /**
  * @author John Ericksen

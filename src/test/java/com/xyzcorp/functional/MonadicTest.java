@@ -17,7 +17,7 @@ public class MonadicTest {
     // Functor -> map
     // Monad   -> flatMap
 
-    // List<Cat> map (Cat c -> c.applyCollar(collar))
+    // List<Cat>.stream() map (Cat c -> c.applyCollar(collar))
     // Observable[Integer], Flux[String], List[Employee], Future[Cow],
     // Optional[Cat], Stream[Capybara] do contain map, flatMap
 
@@ -79,7 +79,9 @@ public class MonadicTest {
     @Test
     void testBadMonad() {
         //explode! multiplier
-        Stream.of(1, 2, 3, 4).map(x -> Stream.of(-x, x, x + 1));
+        Stream<Stream<Integer>> streamStream =
+            Stream.of(1, 2, 3, 4).map(x -> Stream.of(-x, x, x + 1));
+        System.out.println(streamStream.collect(Collectors.toList()));
     }
 
     @Test

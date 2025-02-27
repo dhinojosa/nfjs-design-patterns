@@ -1,4 +1,4 @@
-package com.xyzcorp.javapatterns.decorator.sundae;
+package com.xyzcorp.javapatterns.decorator.classic;
 
 /**
  * @author John Ericksen

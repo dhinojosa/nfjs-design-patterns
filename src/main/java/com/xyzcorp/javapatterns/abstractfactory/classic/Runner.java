@@ -18,7 +18,8 @@ public class Runner {
         }
 
         Client client = new Client(RegistrationDAOAbstractFactory
-            .createRegistrationDAO(daoType));
+            .createRegistrationDAO(DAOType.MYSQL));
+
 
     }
 }

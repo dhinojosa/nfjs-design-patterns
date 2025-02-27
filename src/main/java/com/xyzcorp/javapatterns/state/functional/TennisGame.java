@@ -9,8 +9,8 @@ public record TennisGame(Player home, Player opponent) {
     }
 
     public TennisGame nextTurn(BiFunction<Player, Player, Player> biFunction) {
-        Player player = biFunction.apply(home, opponent);
-        if (player.equals(home))
+        Player winner = biFunction.apply(home, opponent);
+        if (winner.equals(home))
             return new TennisGame(home.beats(opponent), opponent.losesTo(home));
         return new TennisGame(home.losesTo(opponent), opponent.beats(home));
     }

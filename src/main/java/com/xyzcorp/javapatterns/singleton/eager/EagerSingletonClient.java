@@ -11,5 +11,8 @@ public class EagerSingletonClient {
         EagerSingleton eagerSingleton2 = EagerSingleton.getInstance();
 
         assert eagerSingleton == eagerSingleton2;
+        assert eagerSingleton.hashCode() == eagerSingleton2.hashCode();
+        assert eagerSingleton.equals(eagerSingleton2);
+        assert eagerSingleton.toString().equals(eagerSingleton2.toString());
     }
 }

@@ -19,9 +19,9 @@ public class Runner {
     private static String evaluateString(Expression expression) {
         return switch(expression) {
             case Constant c -> String.valueOf(c.number());
-            case Sum(var left, var right)  -> evaluateString(left) + " + " + evaluate(right);
-            case Subtract(var left, var right) -> evaluateString(left) + " - " + evaluate(right);
-            case Multiply(var left, var right) -> evaluateString(left) + " * " + evaluate(right);
+            case Sum(var left, var right)  -> evaluateString(left) + " + " + evaluateString(right);
+            case Subtract(var left, var right) -> evaluateString(left) + " - " + evaluateString(right);
+            case Multiply(var left, var right) -> evaluateString(left) + " * " + evaluateString(right);
         };
     }
 }
