@@ -1,5 +1,6 @@
 package com.xyzcorp.javapatterns.state.enums;
 
+//Thanks to https://github.com/chabala/ for the `enum` version of the state pattern
 
 public enum Score {
     Advantage {
