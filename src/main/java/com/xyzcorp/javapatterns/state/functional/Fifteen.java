@@ -8,9 +8,6 @@ public record Fifteen() implements Score {
             case Lost s -> this;
             default -> new Thirty();
         };
-
-
-
     }
 
     @Override

@@ -17,3 +17,4 @@ public record Forty() implements Score {
         return this;
     }
 }
+
