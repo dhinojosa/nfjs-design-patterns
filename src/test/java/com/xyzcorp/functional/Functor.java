@@ -9,6 +9,9 @@ import java.util.function.Function;
 //Collection<String>
 //Optional<Integer>
 
+//F<A>
+//* -> *
+
 interface Functor<A extends Collection<A>> {
     public <B> Collection<B> map(Function<A, B> function);
 }

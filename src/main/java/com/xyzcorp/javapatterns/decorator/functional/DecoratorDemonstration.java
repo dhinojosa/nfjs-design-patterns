@@ -13,13 +13,13 @@ public class DecoratorDemonstration {
         UnaryOperator<String> cherryOnTop = s -> s + " with a Cherry on top";
         UnaryOperator<String> fudgeFilter = s -> s.replaceAll("Fudge", "xxxxx");
 
-        Function<String, String> sundae = whipcream
+        Function<String, String> sundaeDecorator = whipcream
             .andThen(fudge)
             .andThen(nuts);
 
-        System.out.println(sundae.apply("Vanilla Ice Cream"));
+        System.out.println(sundaeDecorator.apply("Vanilla Ice Cream"));
 
-        Function<String, String> sundaeWithCherry = sundae.andThen(cherryOnTop);
+        Function<String, String> sundaeWithCherry = sundaeDecorator.andThen(cherryOnTop);
         System.out.println(sundaeWithCherry.apply("Vanilla Ice Cream"));  // Output: Nuts Fudge Whipcream Vanilla Ice Cream with a Cherry on top
 
         Function<String, String> filteredSundae = sundaeWithCherry.andThen(fudgeFilter);

@@ -10,8 +10,8 @@ public class Barista {
         EspressoDrink drink =
             EspressoDrink
                 .addShots(2)
-                .setDecaf()
                 .addSkimMilk()
+                .setDecaf()
                 .build();
 
         System.out.println(drink);

@@ -118,7 +118,7 @@ public class MonadicTest {
     void testMonadComposition() {
         Optional<Integer> result =
             Optional.of(30).flatMap(x ->
-                Optional.<Integer>empty().flatMap(y ->
+                Optional.of(20).flatMap(y ->
                     Optional.of(10).map(z -> x + y + z)));
         System.out.println(result);
 
