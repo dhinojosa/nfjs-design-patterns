@@ -2,7 +2,7 @@ package com.xyzcorp.javapatterns.state.functional;
 
 public record Player(String name, Score score) {
     public Player(String name) {
-        this(name, new Love());
+        this(name, Score.Love);
     }
 
     public Player beats(Player opponent) {
